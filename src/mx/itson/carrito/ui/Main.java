@@ -30,7 +30,7 @@ public class Main {
     bmw.setAnio(2021);
     bmw.setKilometraje(10000);
     bmw.setTipoMotor(TipoMotor.HÍBRIDO);
-    bmw.setTipoTransmision(TipoTransmision.AUTOMATICO);
+    bmw.setTipoTransmision(TipoTransmision.ESTANDAR);
     //invocamos al metodo contenido en la clase carro
     double tiempo = bmw.calcularTiempo(distancia, velocidad);
     
