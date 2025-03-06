@@ -4,11 +4,27 @@
  */
 package mx.itson.carrito.entidades;
 
+import mx.itson.carrito.enums.TipoMotor;
+
 /**
  *
  * @author icesp
  */
 public class Carro {
+
+    /**
+     * @return the tipoMotor
+     */
+    public TipoMotor getTipoMotor() {
+        return tipoMotor;
+    }
+
+    /**
+     * @param tipoMotor the tipoMotor to set
+     */
+    public void setTipoMotor(TipoMotor tipoMotor) {
+        this.tipoMotor = tipoMotor;
+    }
 
     /**
      * @return the kilometraje
@@ -70,6 +86,7 @@ public class Carro {
     private int anio;
     private String marca;
     private double kilometraje;
+    private TipoMotor tipoMotor;
     
     /**
      * Calcula el tiempo que tarda el carro en recorrer una distancia.
