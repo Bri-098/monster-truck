@@ -14,6 +14,34 @@ import mx.itson.carrito.enums.TipoTransmision;
 public class Carro {
 
     /**
+     * @return the reproductor
+     */
+    public Reproductor getReproductor() {
+        return reproductor;
+    }
+
+    /**
+     * @param reproductor the reproductor to set
+     */
+    public void setReproductor(Reproductor reproductor) {
+        this.reproductor = reproductor;
+    }
+
+    /**
+     * @return the propietario
+     */
+    public Propietario getPropietario() {
+        return propietario;
+    }
+
+    /**
+     * @param propietario the propietario to set
+     */
+    public void setPropietario(Propietario propietario) {
+        this.propietario = propietario;
+    }
+
+    /**
      * @return the tipoTransmision
      */
     public TipoTransmision getTipoTransmision() {
@@ -103,6 +131,8 @@ public class Carro {
     private double kilometraje;
     private TipoMotor tipoMotor;
     private TipoTransmision tipoTransmision;
+    private Propietario propietario;
+    private Reproductor reproductor;
     
     /**
      * Calcula el tiempo que tarda el carro en recorrer una distancia.

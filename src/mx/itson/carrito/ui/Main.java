@@ -6,6 +6,8 @@ package mx.itson.carrito.ui;
 
 import java.util.Scanner;
 import mx.itson.carrito.entidades.Carro;
+import mx.itson.carrito.entidades.Propietario;
+import mx.itson.carrito.entidades.Reproductor;
 import mx.itson.carrito.enums.TipoMotor;
 import mx.itson.carrito.enums.TipoTransmision;
 
@@ -31,11 +33,31 @@ public class Main {
     bmw.setKilometraje(10000);
     bmw.setTipoMotor(TipoMotor.HÍBRIDO);
     bmw.setTipoTransmision(TipoTransmision.ESTANDAR);
+    
+    //datos del propietario
+    Propietario prop = new Propietario();
+    prop.setNombre("Patricio Kelvin");
+    prop.setDomicilio("Calle 23 colonia congo");
+    prop.setTelefono("6221734422");
+    prop.setEmail("patrikel@gmail.com");
+    
+    bmw.setPropietario(prop);
+    
+    //datos de la musica del carro
+    Reproductor audio = new Reproductor();
+    audio.setRadio("Pop");
+    audio.setUsb("Rock");
+    audio.setHasBluetooth(Boolean.TRUE);
+    audio.setHasCarPlay(Boolean.FALSE);
+    
+    bmw.setReproductor(audio);
+    
     //invocamos al metodo contenido en la clase carro
     double tiempo = bmw.calcularTiempo(distancia, velocidad);
     
     System.out.println("El tiempo que le tomara al carro " + bmw.getMarca() 
             + " de color " + bmw.getColor() + " del año " + bmw.getAnio() + " es de: " + tiempo
-    + " y ahora, su kilometraje es de " + bmw.getKilometraje());
+    + " y ahora, su kilometraje es de " + bmw.getKilometraje() + " . El propietario de este carro es: "
+    + bmw.getPropietario().getNombre() + " y esta escuchando: " + bmw.getReproductor().getUsb());
     }
 }
